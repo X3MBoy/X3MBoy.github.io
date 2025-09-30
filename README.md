@@ -1,9 +1,3 @@
----
-title: Ejercicio Práctico Docker y GAR
-tags: gcp, google, cloud, docker
-description: Ejercicio práctico de Docker y Google Artifact Registry
----
-
 # Ejercicio Práctico: Docker, Podman y Google Artifact Registry (GAR)
 
 ## Objetivo
