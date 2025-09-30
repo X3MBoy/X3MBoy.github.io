@@ -1,163 +1,135 @@
-# Ejercicio Práctico: Docker, Podman y Google Artifact Registry (GAR)
+# CURRICULUM VITAE
 
-## Objetivo
-Crear una imagen Docker/Podman con una aplicación básica, subirla a Google Artifact Registry (GAR), analizarla y luego ejecutarla localmente desde el GAR.
+## CONTACTO
+* **Nombre:** Eduard Alexander Lucena Mendoza
+* **Email:** eduardlucena@gmail.com
+* **Skype:** eduardlucena
+* **Móvil:** +56 9 6231 8010
+* **LinkedIn:** (URL a completar)
 
+---
 
-## Requisitos Previos
-- Tener instalado **Docker** o **Podman** (puedes elegir uno).
-- Tener una cuenta en **Google Cloud Platform (GCP)** y el **SDK de Google Cloud (`gcloud`)** instalado y configurado.
-- Acceso a **Google Artifact Registry** (habilitado en GCP).
+## PERSONAL DETAILS
+* **Degree:** System Engineer
+* **Age:** 40 years old (Date of birth: 27-06-1985)
+* **Marital status:** Married with a child
+* **Nationality:** Venezuelan
+* **Language:** Spanish (Native), English (High level, Business)
 
-## Pasos del Ejercicio
+---
 
-### 1. Crear una aplicación básica
+## PROFESSIONAL PROFILE:
+**System Engineer**
 
-Vamos a usar un simple servidor web en Python con Flask.
+* **+15 years of experience** managing and supporting Unix-like systems: Linux, AIX, HP-UX, Solaris, OpenBSD, FreeBSD.
+* **+3 years of experience as SRE** at FinTech companies, creating, supporting and managing **CI/CD pipelines** in different tools like **Jenkins**, and managing **IaC with Terraform**.
+* **+2 years of experience as DevSecOps** at a large IT company, preparing pipelines with both open and closed source technologies.
+* Experience with CI/CD pipelines in popular solutions like **Jenkins, GitLab and GitHub actions**.
+* Experience with **Kubernetes clusters**: RKE, GKE and AKS.
+* **+8 years of experience** in the Telecom industry, including Packet core support and optimization in mobile networks, KPI analysis, network planning, design and optimization.
+* Experience leading technical teams, problem resolution teams and strategic planning.
+* Great communication skills, teamwork and proactive learning.
 
-Crea un directorio para el proyecto:
+---
 
-```bash
-mkdir app-gar && cd app-gar
-```
+## OBJECTIVE
+Project my potential at work, learn and grow in the professional market, contribute my knowledge and experience in telecommunications environments as well as in IT projects. Apply my knowledge and contribute to the growth and learning of my colleagues, as well as learn from them.
 
-Crea un archivo `app.py` con el siguiente contenido:
+---
 
-```python
-from flask import Flask
+## WORK EXPERIENCE
 
-app = Flask(__name__)
+### SRE Senior
+**Tata Consultancy Services** | *November 2024 - Present*
+* Responsible for the provisioning of the technological infrastructure and the enabling of services for customers.
+* Ensure systems are built and operational in compliance with customer Controls and Policies.
+* Helping with the migration of application to SaaS through automation of processes.
+* Ensure the security of production environments: implement segregation of roles and environments, apply best security practices, ensure the security of code repositories.
 
-@app.route("/")
-def hello():
-    return "¡Hola! Esta es mi imagen en Google Artifact Registry."
+### CEM Engineer
+**Murex** | *November 2023 - October 2024*
+* Configure environments for the customers. Maintenance and support of MX.3 environments.
+* Creation of new environments. Perform installations of the full software suite. Upgrade software suite versions.
+* Move the manual steps of installation, upgrade, maintenance and support to **automatic steps, with CI pipelines in Jenkins.**
+* Troubleshoot Jenkins CI pipelines.
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
-```
+### SRE DevOps Senior
+**Equifax** | *March 2022 - October 2023*
+* Responsible for the provisioning of the technological infrastructure and the enabling of services for the company.
+* Ensure that the design, construction and operation of the technological platform complies with the delivery to internal and external clients in an efficient manner.
+* Responsible for the **"uptime" of the systems: monitoring, incident response, root cause analysis** of incidents.
+* Construction of Platform as a Service and/or Infrastructure as a Service solutions: design, development and maintenance of **CI/CD pipelines**, development of tools to automate code production.
+* Ensure the security of production environments.
 
-Crea un archivo `requirements.txt` con las dependencias:
+### Tech Leader DevSecOps & Partner Solution Architect
+**Technology Solutions** | *November 2021 - February 2022*
+* Lead the DevSecOps team that provides DevSecOps solutions to the customer.
+* Support the team with technical aid in the solutions and tools used by the customer in their pipelines: Checkmarks, Dependency Check, Veracode, Jenkins, SonarQube, Parasoft DTP, BitBucket, SOATest.
+* Analyze customers' environment and problems to provide complete security solutions.
 
-```
-flask==2.0.1
-```
+### DevSecOps Engineer
+**Falabella Tecnología Corporativa** | *January 2021 - November 2021*
+* Preparing **CI/CD pipelines on GitLab for security checkings** of deployments: SAST, secrets detection, dependency checking.
+* Developing new tools for hardening of containers, applications and virtual machines.
+* Creation of secure containers and updating registries of new internal containers.
+* Support developers during the lifecycle of applications supplying security and auditing tools.
 
-### 2. Crear un Dockerfile
-Crea un archivo `Dockerfile` con:
+### System engineer
+**Falabella Tecnología Corporativa** | *August 2018 - December 2020*
+* Lead the maintenance team related to infrastructure in OS Unix-like.
+* Prepare base images for VM creation. Receive and check servers compliance to company standards.
+* Update and patch systems both manually and with patching systems (spacewalk and Red Hat's Satellite).
+* Preparing contingency plans (DRP - Disaster Recovery Protocol).
+* **Automation of repetitive tasks.**
+* Administering Unix-like servers: Red Hat Enterprise Linux, Oracle Linux, CentOS, AIX, HP-UX.
 
-```dockerfile
-# Usamos una imagen base de Python
-FROM python:3.9-slim
+### Operations Engineer
+**I-New Chile SpA** | *January 2016 - June 2018*
+* Management delivers proactive and reactive support, responding to requests.
+* Prioritize and schedule requests received and failures. Facilitate troubleshooting.
 
-# Copiamos la aplicación
-WORKDIR /app
-COPY . .
+*(Se omiten las experiencias anteriores a 2016 para mantener el enfoque en TI/SRE moderno, aunque están en el PDF. Si las necesitas, las puedes añadir siguiendo el mismo formato de encabezados de la experiencia laboral).*
 
-# Instalamos dependencias
-RUN pip install --no-cache-dir -r requirements.txt
+---
 
-# Exponemos el puerto y ejecutamos la app
-EXPOSE 8080
-CMD ["python", "app.py"]
-```
+## EDUCATION
+* **Systems' Engineer** - Universidad Centroccidental "Lisandro Alvarado" (2008) - Venezuela
+* **Cybersecurity Diploma** - Universidad de Chile (2019) - Santiago, Chile.
 
-### 3. Construir la imagen
-Usando **Docker**:
+---
 
-```bash
-docker build -t my-flask-app .
-```
+## CERTIFICATES
+* **Associate Cloud Engineer** - Google (July 2023)
+* Cisco Certified Entry Networking Technician (CCENT) - Cisco (October 2018)
+* HCNA Cloud - Huawei (July 2015)
 
-Usando **Podman**:
+---
 
-```bash
-podman build -t my-flask-app .
-```
+## SKILLS
+### SRE & DevOps
+* Advanced knowledge on **Linux** and operative systems based on UNIX.
+* Experience with CI/CD pipelines (Jenkins, GitLab, GitHub Actions).
+* Infrastructure as Code (**Terraform**).
+* Container Orchestration (**Kubernetes**: RKE, GKE, AKS).
+* **Bash** scripting for automation.
+* Management and support over DNS (**Infoblox**) and AAA.
 
-Verifica que la imagen se creó correctamente:
+### Telecom & Network (Legacy Focus)
+* Configuration and analysis of **KPIs** from UMTS and GPRS packet core.
+* Advance Support over GPRS and UMTS packet core network.
+* Experience in O&M and configuration tasks over Nokia Siemens Networks and Huawei equipment (SGSN, GGSN, DPI, MME).
+* Knowledge over the **PRTG Monitoring Tools** from Paessler.
+* Experience handling of the **PPP and 3GPP standards protocols.**
 
-```bash
-docker images  # o `podman images`
-```
+### Software Knowledge
+* **Databases:** PostgreSQL Database administration, Oracle 11g Database, MySQL Database.
+* **Tools:** Remedy Change Management, Huawei M2000, NSN's Traffica Z4.
+* **Programming:** Basic Skills in PHP, HTML, **Python**, C, C++ and Bash.
 
-### 4. Configurar Google Artifact Registry (GAR)
+### Protocols, Platforms and Standards
+GTP, GbolP, luPSolV, Direct Tunnel, SNMP, **Diameter** (Online Charging), Radius, GRX, DPI.
 
-Crea un repositorio en GAR (asegúrate de que la API esté habilitada):
+---
 
-```bash
-gcloud artifacts repositories create my-repo \
-  --repository-format=docker \
-  --location=us-central1 \
-  --description="Repositorio Docker para mi aplicación"
-```
-
-Configura Docker/Podman para autenticarse con GAR:
-
-```bash
-gcloud auth configure-docker us-central1-docker.pkg.dev
-```
-
-### 5. Subir la imagen a GAR
-Primero, etiqueta la imagen con la URL de tu repositorio:
-
-```bash
-docker tag my-flask-app us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-# o con Podman:
-podman tag my-flask-app us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-```
-
-Sube la imagen:
-
-```bash
-docker push us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-# o con Podman:
-podman push us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-```
-
-Verifica en la consola de GCP (Artifact Registry) que la imagen esté disponible.
-
-### 6. Analizar la imagen (opcional)
-Puedes usar **Dive** o **Trivy** para analizar la imagen:
-
-```bash
-docker run --rm -it \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  wagoodman/dive:latest us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-```
-
-### 7. Descargar y ejecutar la imagen desde GAR
-Descarga la imagen:
-
-```bash
-docker pull us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-# o con Podman:
-podman pull us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-```
-
-Ejecuta el contenedor:
-
-```bash
-docker run -d -p 8080:8080 us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-# o con Podman:
-podman run -d -p 8080:8080 us-central1-docker.pkg.dev/[TU-PROYECTO-ID]/my-repo/my-flask-app:1.0
-```
-
-Verifica en tu navegador o con `curl`:
-
-```bash
-curl http://localhost:8080
-```
-Deberías ver:
-
-```
-¡Hola! Esta es mi imagen en Google Artifact Registry.
-```
-
-## Conclusión
-
-En este ejercicio:
-✅ Creamos una aplicación básica en Python.
-✅ Construimos una imagen con Docker/Podman.
-✅ Subimos la imagen a Google Artifact Registry (GAR).
-✅ Analizamos la imagen (opcional).
-✅ Descargamos y ejecutamos la imagen desde GAR.
+## REFERENCES
+References available upon request
