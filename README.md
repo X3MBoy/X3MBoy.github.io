@@ -5,7 +5,7 @@
 * **Email:** eduardlucena@gmail.com
 * **Skype:** eduardlucena
 * **Móvil:** +56 9 6231 8010
-* **LinkedIn:** (URL a completar)
+* **LinkedIn:** https://www.linkedin.com/in/eduardlucena/
 
 ---
 
