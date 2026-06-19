@@ -88,8 +88,8 @@ Project my potential at work, learn and grow in the professional market, contrib
 * Management delivers proactive and reactive support, responding to requests.
 * Prioritize and schedule requests received and failures. Facilitate troubleshooting.
 
-*(Se omiten las experiencias anteriores a 2016 para mantener el enfoque en TI/SRE moderno, aunque están en el PDF. Si las necesitas, las puedes añadir siguiendo el mismo formato de encabezados de la experiencia laboral).*
-
+### Previous experiences
+* Previous experiences are available on **[LinkedIn](https://www.linkedin.com/in/eduardlucena/)]**
 ---
 
 ## EDUCATION
